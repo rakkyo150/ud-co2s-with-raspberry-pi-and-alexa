@@ -1,5 +1,5 @@
 # ud-co2s-with-raspberry-pi-and-alexa
-UD-CO2SをRaspberry Piに挿している状態で、Alexaで現在の値を確認できるようにするためのRustスクリプト
+UD-CO2SをRaspberry Piに挿している状態で、Alexaで現在の酸素濃度値を確認できるようにするためのRustスクリプト
 
 ## 注意
 https://scrapbox.io/oquno/UD-CO2S や https://gist.github.com/oquno/d07f6dbf8cc760f2534d9914efe79801 を参考にしましたが、正直理解の程度は低いです。<br>
@@ -22,7 +22,7 @@ flowchart
 
 ## 前提となる環境
 Rustによるコンパイルが可能な環境が必要です(`rustc -V`や`cargo -V`で確認できます)。<br>
-以下では、[alexa-remote-control.sh](https://github.com/thorsten-gehrig/alexa-remote-control)と[Node-Red](https://nodered.org),[Node-RED Alexa Home Skill Bredge](https://alexa-node-red.bm.hardill.me.uk)を使う想定なので、それぞれ[ここ](#参考になるサイト等)を参考にしながら最低限動かせるようにはしてください。<br>
+以下では、[alexa-remote-control.sh](https://github.com/thorsten-gehrig/alexa-remote-control)と[Node-Red](https://nodered.org),[Node-RED Alexa Home Skill Bridge](https://alexa-node-red.bm.hardill.me.uk)を使う想定なので、それぞれ[ここ](#参考になるサイト等)を参考にしながら最低限動かせるようにはしてください。<br>
 また、現在alexa-remote-controlを少なくとも日本で使うには、[alexa-cookie-cli](https://github.com/adn77/alexa-cookie-cli)でREFRESH_TOKENを取得して、alexa-remote-controlの認証でREFRESH_TOKENを使わないとダメなようです。<br>
 また、少なくとも自分の環境のラズパイではREFRESH_TOKENの取得ができなかったので、windowsでalexa-cookie-cliを動かして取得しました。<br>
 以上をまとめると、[関係図](#関係図)の1,2,3,4と7,8が正常に動く環境が必要になります。
@@ -62,6 +62,11 @@ Node-RED関係の設定の基本は[このページの方法](https://qiita.com/
 
 以上で設定は終了です。<br>
 
+## 使い方
+「アレクサ、[Node-RED Alexa Home Skill Bridgeで設定したデバイス名]を付けて」などといえば酸素濃度値が返ってくるはずです。<br>
+もしだめな場合は、[関係図](#関係図)を見ながらそれぞれがつながっているかを確認しましょう。<br>
+Node-REDの画面をみながらもう一度アレクサに話しかけて、どこでうまくいっていないのかを特定して対応しましょう。<br>
+特にアレクサでデバイスの検出をし忘れていないかは見落としがちな気がします。
 
 ## 技術選定の理由
 そもそも、UD-CO2Sを買ったのは安かったからで、実は酸素濃度の管理をバリバリしたいわけではありませんでした。<br>
