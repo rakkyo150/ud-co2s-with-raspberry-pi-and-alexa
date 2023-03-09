@@ -11,7 +11,7 @@ https://scrapbox.io/oquno/UD-CO2S や https://gist.github.com/oquno/d07f6dbf8cc7
 flowchart
   Zero(USER) --1.Ask--> First(Alexa)
   First --8. Response--> Zero
-  First --2. Fire Event--> Second(Node-RED Alexa Home Skill Bredge)
+  First --2. Fire Event--> Second(Node-RED Alexa Home Skill Bridge)
   Second --3. Fire Event--> Third(Node-RED)
   Third --4. Execute Binary--> Forth(Raspberry Pi)
   Forth -- 6. Log File --> udco2s.json
