@@ -8,7 +8,7 @@ use std::io::BufReader;
 
 // Node-REDから実行するのを想定しているので、絶対パスで指定してください
 const LOG_FILE_PATH: &str = "/home/user/udco2s.json";
-const ALEXA_REMOTE_CONTROL_SH_PATH: &str = "/home/hogehoge/alexa-remote-control/alexa_remote_control.sh";
+const ALEXA_REMOTE_CONTROL_SH_PATH: &str = "/home/user/alexa-remote-control/alexa_remote_control.sh";
 const YOUR_ALEXA_DEVICE_NAME: &str = "hogehogeさんの Echo Dot";
 
 // 以下は基本的に変更する必要はありません
