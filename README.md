@@ -1,5 +1,5 @@
 # ud-co2s-with-raspberry-pi-and-alexa
-UD-CO2SをRaspberry Piに挿している状態で、Alexaで現在の酸素濃度値を確認できるようにするためのRustスクリプト
+UD-CO2SをRaspberry Piに挿している状態で、Alexaで現在の二酸化炭素濃度値を確認できるようにするためのRustスクリプト
 
 ## 注意
 https://scrapbox.io/oquno/UD-CO2S や https://gist.github.com/oquno/d07f6dbf8cc760f2534d9914efe79801 を参考にしましたが、正直理解の程度は低いです。<br>
